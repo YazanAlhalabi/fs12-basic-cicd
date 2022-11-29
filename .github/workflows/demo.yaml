@@ -1,0 +1,10 @@
+name: basic demo
+
+on: [push]
+
+jobs:
+  demo:
+    runs-on: ubuntu-20.4
+    steps:
+      - name: a basic echo
+        run: echo Hello!
