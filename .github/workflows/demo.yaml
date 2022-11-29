@@ -1,15 +1,20 @@
 name: basic demo
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
 
 jobs:
-  demo:
+  first:
     runs-on: ubuntu-latest
     steps:
       - name: a basic echo 1st job
         run: echo Hello!
-  demo2:
+  second:
     runs-on: macos-latest
+    needs: [first]
     steps:
-      - name: a basic echo 2nd job
-        run: echo Hello You!
+      - name: a basic echo 1st job
+        run: echo Hello!
