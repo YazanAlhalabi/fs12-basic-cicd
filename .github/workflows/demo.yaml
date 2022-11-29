@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   demo:
-    runs-on: ubuntu-20.4
+    runs-on: ubuntu-latest
     steps:
       - name: a basic echo
         run: echo Hello!
